@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/diagnostic_result.schema.json",
+  "title": "Diagnostic Result",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "symptomId",
+    "resultType",
+    "title",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "diagnostic_result"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "symptomId": {
+      "type": "string"
+    },
+    "resultType": {
+      "enum": [
+        "observation",
+        "possible_cause",
+        "recommended_inspection",
+        "recommended_action",
+        "stop"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "relatedSystemIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "relatedComponentIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "nextNodeIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "safetyRuleIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "referenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

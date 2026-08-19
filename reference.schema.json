@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/reference.schema.json",
+  "title": "Reference",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "type",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "reference"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "type": {
+      "enum": [
+        "manufacturer_manual",
+        "service_manual",
+        "technical_bulletin",
+        "parts_catalog",
+        "official_document",
+        "trusted_secondary",
+        "user_supplied",
+        "other"
+      ]
+    },
+    "publisher": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publicationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "documentLocator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "applicability": {
+      "type": "object",
+      "properties": {
+        "vehicleIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "configurationIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "verifiedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "verificationMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

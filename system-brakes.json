@@ -1,0 +1,26 @@
+{
+  "id": "system.brakes",
+  "schemaVersion": 1,
+  "entityType": "system",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "name": "Brake System",
+  "description": "Generic vehicle braking system knowledge domain.",
+  "parentSystemId": null,
+  "componentIds": [
+    "component.brakes.rear-wheel-cylinder"
+  ],
+  "procedureIds": [
+    "procedure.brakes.manual-bleeding"
+  ],
+  "inspectionIds": [
+    "inspection.brakes.general"
+  ],
+  "diagnosticIds": [
+    "diagnostic.symptom.low-brake-pedal"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "referenceIds": []
+}

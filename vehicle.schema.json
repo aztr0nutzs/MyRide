@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/vehicle.schema.json",
+  "title": "Vehicle",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "identity",
+    "configurationId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "vehicle"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "year",
+        "make",
+        "model"
+      ],
+      "properties": {
+        "year": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1886
+        },
+        "make": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trim": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "configurationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nickname": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licensePlate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "odometer": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "odometerUnit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "noteIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/vehicle_configuration.schema.json",
+  "title": "Vehicle Configuration",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "vehicleId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "vehicle_configuration"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "vehicleId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "engine": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transmission": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "drivetrain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cab": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rearAxle": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "abs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wheels": {
+      "type": "object"
+    },
+    "tires": {
+      "type": "object"
+    },
+    "modifications": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "specifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "value",
+          "unit",
+          "source"
+        ],
+        "properties": {
+          "value": {},
+          "unit": {
+            "type": "string"
+          },
+          "condition": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "referenceIds",
+              "verificationStatus"
+            ],
+            "properties": {
+              "referenceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "verificationStatus": {
+                "enum": [
+                  "verified",
+                  "partially_verified",
+                  "unverified",
+                  "unknown"
+                ]
+              },
+              "verifiedAt": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "verificationNotes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "referenceIds",
+        "verificationStatus"
+      ],
+      "properties": {
+        "referenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "verificationStatus": {
+          "enum": [
+            "verified",
+            "partially_verified",
+            "unverified",
+            "unknown"
+          ]
+        },
+        "verifiedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "verificationNotes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

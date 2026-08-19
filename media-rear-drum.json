@@ -1,0 +1,17 @@
+{
+  "id": "media.diagram.rear-drum-inspection",
+  "schemaVersion": 1,
+  "entityType": "media_diagram",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Rear drum brake inspection diagram",
+  "mediaType": "svg",
+  "path": "assets/diagrams/rear-drum-inspection.svg",
+  "altText": "Schematic of a rear drum brake assembly and inspection points.",
+  "caption": "Migrated schematic from the existing guide.",
+  "sourceReferenceIds": [
+    "reference.existing-guide"
+  ],
+  "hotspots": [],
+  "accessibilityLabel": "Rear drum brake inspection diagram"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "procedure.brakes.manual-bleeding",
+  "schemaVersion": 1,
+  "entityType": "procedure",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "title": "Manual Brake Bleeding",
+  "description": "Conventional manual brake bleeding procedure migrated from the existing guide.",
+  "systemId": "system.brakes",
+  "applicability": {
+    "vehicleIds": [
+      "vehicle.ford.f150.1997.example"
+    ],
+    "configurationIds": [
+      "configuration.ford.f150.1997.example"
+    ],
+    "conditions": [],
+    "exclusions": []
+  },
+  "difficulty": "moderate",
+  "estimatedMinutes": null,
+  "prerequisites": [
+    "Confirm the brake system is otherwise mechanically safe before bleeding."
+  ],
+  "toolIds": [
+    "tool.brake-bleeding-equipment"
+  ],
+  "materialIds": [
+    "material.brake-fluid-dot3"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal",
+    "safety.brakes.keep-reservoir-from-running-dry"
+  ],
+  "stepIds": [
+    "procedure-step.brakes.manual-bleeding.001",
+    "procedure-step.brakes.manual-bleeding.002",
+    "procedure-step.brakes.manual-bleeding.003"
+  ],
+  "completionCriteria": [
+    "Final stationary pedal test passes.",
+    "No active hydraulic leak is present."
+  ],
+  "troubleshooting": [],
+  "referenceIds": [],
+  "mediaIds": [
+    "media.diagram.two-person-bleeding"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/service_record.schema.json",
+  "title": "Service Record",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "vehicleId",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "service_record"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "vehicleId": {
+      "type": "string"
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "mileage": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "maintenanceItemId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "procedureId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "noteIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "photoIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "cost": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}

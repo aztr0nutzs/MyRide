@@ -1,0 +1,18 @@
+{
+  "id": "service.example",
+  "schemaVersion": 1,
+  "entityType": "service_record",
+  "knowledgeScope": "vehicle_specific",
+  "status": "draft",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "date": null,
+  "mileage": null,
+  "maintenanceItemId": null,
+  "description": "Template only.",
+  "procedureId": null,
+  "parts": [],
+  "materials": [],
+  "noteIds": [],
+  "photoIds": [],
+  "cost": null
+}

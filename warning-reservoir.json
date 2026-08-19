@@ -1,0 +1,13 @@
+{
+  "id": "warning.brakes.keep-reservoir-full",
+  "schemaVersion": 1,
+  "entityType": "warning",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Monitor reservoir level",
+  "severity": "warning",
+  "message": "Do not allow the master-cylinder reservoir to run dry during bleeding.",
+  "context": "Manual brake bleeding",
+  "safetyCritical": true,
+  "referenceIds": []
+}

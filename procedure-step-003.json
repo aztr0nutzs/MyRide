@@ -1,0 +1,25 @@
+{
+  "id": "procedure-step.brakes.manual-bleeding.003",
+  "schemaVersion": 1,
+  "entityType": "procedure_step",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "procedureId": "procedure.brakes.manual-bleeding",
+  "order": 3,
+  "title": "Perform stationary verification",
+  "instructions": [
+    "Perform the final stationary pedal test.",
+    "If the pedal remains unsafe, do not road-test the vehicle."
+  ],
+  "warningIds": [
+    "warning.brakes.unsafe-final-pedal"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "mediaIds": [],
+  "checkpoint": {
+    "type": "verification"
+  },
+  "branch": null
+}

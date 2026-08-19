@@ -1,0 +1,31 @@
+{
+  "id": "inspection.brakes.general",
+  "schemaVersion": 1,
+  "entityType": "inspection",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Brake System Safety Inspection",
+  "description": "General pre-service brake inspection migrated from the existing guide.",
+  "systemId": "system.brakes",
+  "applicability": {
+    "vehicleIds": [],
+    "configurationIds": [],
+    "conditions": [],
+    "exclusions": []
+  },
+  "checkpointIds": [
+    "checkpoint.brakes.fluid-level",
+    "checkpoint.brakes.external-leak",
+    "checkpoint.brakes.pedal-condition"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "completionCriteria": [
+    "Resolve safety-critical findings before road testing."
+  ],
+  "referenceIds": [],
+  "mediaIds": [
+    "media.diagram.hydraulic-inspection"
+  ]
+}

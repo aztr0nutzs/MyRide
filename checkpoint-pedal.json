@@ -1,0 +1,28 @@
+{
+  "id": "checkpoint.brakes.pedal-condition",
+  "schemaVersion": 1,
+  "entityType": "inspection_checkpoint",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "inspectionId": "inspection.brakes.general",
+  "order": 3,
+  "title": "Brake pedal condition",
+  "instruction": "Perform a stationary pedal evaluation.",
+  "type": "functional_test",
+  "possibleResults": [
+    "pass",
+    "warning",
+    "fail",
+    "unknown",
+    "not_applicable"
+  ],
+  "expectedSpecification": null,
+  "requiresNoteOn": [
+    "warning",
+    "fail"
+  ],
+  "requiresPhotoOn": [],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ]
+}

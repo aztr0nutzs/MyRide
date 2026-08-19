@@ -1,0 +1,25 @@
+{
+  "id": "procedure-step.brakes.manual-bleeding.002",
+  "schemaVersion": 1,
+  "entityType": "procedure_step",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "procedureId": "procedure.brakes.manual-bleeding",
+  "order": 2,
+  "title": "Perform manual bleed cycle",
+  "instructions": [
+    "Use the verified configuration's applicable bleeder sequence.",
+    "Helper applies and holds pedal pressure while the bleeder is opened.",
+    "Close the bleeder before the helper releases the pedal.",
+    "Repeat until fluid is clear and bubble-free."
+  ],
+  "warningIds": [],
+  "safetyRuleIds": [
+    "safety.brakes.keep-reservoir-from-running-dry"
+  ],
+  "mediaIds": [
+    "media.diagram.two-person-bleeding"
+  ],
+  "checkpoint": null,
+  "branch": null
+}

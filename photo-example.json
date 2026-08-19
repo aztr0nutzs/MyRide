@@ -1,0 +1,18 @@
+{
+  "id": "photo.example",
+  "schemaVersion": 1,
+  "entityType": "photo_attachment",
+  "knowledgeScope": "vehicle_specific",
+  "status": "draft",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "relatedEntityIds": [
+    "inspection.brakes.general"
+  ],
+  "filename": "example.jpg",
+  "mimeType": "image/jpeg",
+  "storageKey": "photos/example.jpg",
+  "capturedAt": null,
+  "caption": "Example attachment record.",
+  "checksum": null,
+  "source": "file"
+}

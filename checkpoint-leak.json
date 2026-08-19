@@ -1,0 +1,30 @@
+{
+  "id": "checkpoint.brakes.external-leak",
+  "schemaVersion": 1,
+  "entityType": "inspection_checkpoint",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "inspectionId": "inspection.brakes.general",
+  "order": 2,
+  "title": "External hydraulic leakage",
+  "instruction": "Inspect accessible hydraulic components for leakage.",
+  "type": "visual",
+  "possibleResults": [
+    "pass",
+    "warning",
+    "fail",
+    "unknown",
+    "not_applicable"
+  ],
+  "expectedSpecification": null,
+  "requiresNoteOn": [
+    "warning",
+    "fail"
+  ],
+  "requiresPhotoOn": [
+    "fail"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ]
+}

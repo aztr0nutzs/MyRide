@@ -1,0 +1,26 @@
+{
+  "id": "checkpoint.brakes.fluid-level",
+  "schemaVersion": 1,
+  "entityType": "inspection_checkpoint",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "inspectionId": "inspection.brakes.general",
+  "order": 1,
+  "title": "Brake fluid level",
+  "instruction": "Inspect reservoir condition and level.",
+  "type": "visual",
+  "possibleResults": [
+    "pass",
+    "warning",
+    "fail",
+    "unknown",
+    "not_applicable"
+  ],
+  "expectedSpecification": null,
+  "requiresNoteOn": [
+    "warning",
+    "fail"
+  ],
+  "requiresPhotoOn": [],
+  "safetyRuleIds": []
+}

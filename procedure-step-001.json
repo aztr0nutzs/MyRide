@@ -1,0 +1,26 @@
+{
+  "id": "procedure-step.brakes.manual-bleeding.001",
+  "schemaVersion": 1,
+  "entityType": "procedure_step",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "procedureId": "procedure.brakes.manual-bleeding",
+  "order": 1,
+  "title": "Prepare vehicle and reservoir",
+  "instructions": [
+    "Secure the vehicle.",
+    "Prepare the applicable brake fluid reservoir.",
+    "Do not allow the reservoir to run dry."
+  ],
+  "warningIds": [
+    "warning.brakes.keep-reservoir-full"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.keep-reservoir-from-running-dry"
+  ],
+  "mediaIds": [
+    "media.diagram.hydraulic-inspection"
+  ],
+  "checkpoint": null,
+  "branch": null
+}

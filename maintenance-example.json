@@ -1,0 +1,19 @@
+{
+  "id": "maintenance.example",
+  "schemaVersion": 1,
+  "entityType": "maintenance_item",
+  "knowledgeScope": "generic",
+  "status": "draft",
+  "name": "Example maintenance item",
+  "description": "Template only; no interval is asserted.",
+  "systemId": null,
+  "applicability": {
+    "vehicleIds": [],
+    "configurationIds": [],
+    "conditions": [],
+    "exclusions": []
+  },
+  "interval": null,
+  "procedureIds": [],
+  "referenceIds": []
+}

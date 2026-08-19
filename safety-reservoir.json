@@ -1,0 +1,27 @@
+{
+  "id": "safety.brakes.keep-reservoir-from-running-dry",
+  "schemaVersion": 1,
+  "entityType": "safety_rule",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Do not allow brake-fluid reservoir to run dry",
+  "severity": "warning",
+  "category": "braking",
+  "trigger": {
+    "type": "procedure_state",
+    "conditions": [
+      "fluid level low"
+    ]
+  },
+  "message": "Monitor the reservoir during bleeding and keep it from running dry.",
+  "immediateActions": [
+    "Pause and restore the applicable fluid level."
+  ],
+  "prohibitedActions": [
+    "Do not continue with an empty reservoir."
+  ],
+  "resumeConditions": [
+    "Reservoir restored to applicable level."
+  ],
+  "referenceIds": []
+}

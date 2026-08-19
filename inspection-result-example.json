@@ -1,0 +1,18 @@
+{
+  "id": "inspection-result.example",
+  "schemaVersion": 1,
+  "entityType": "inspection_result",
+  "knowledgeScope": "vehicle_specific",
+  "status": "draft",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "inspectionId": "inspection.brakes.general",
+  "checkpointId": "checkpoint.brakes.pedal-condition",
+  "result": "unknown",
+  "severity": null,
+  "observation": null,
+  "measurement": null,
+  "noteIds": [],
+  "photoIds": [],
+  "safetyRuleIds": [],
+  "createdAt": "2026-08-17T00:00:00Z"
+}

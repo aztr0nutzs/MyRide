@@ -1,0 +1,17 @@
+{
+  "id": "tool.brake-bleeding-equipment",
+  "schemaVersion": 1,
+  "entityType": "tool",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "name": "Brake bleeding equipment",
+  "description": "Clear tubing and a suitable catch container or bleeding kit.",
+  "category": "brakes",
+  "requiredByProcedureIds": [
+    "procedure.brakes.manual-bleeding"
+  ],
+  "safetyNotes": [
+    "Keep the catch container stable."
+  ],
+  "referenceIds": []
+}

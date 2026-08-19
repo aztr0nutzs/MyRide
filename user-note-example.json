@@ -1,0 +1,15 @@
+{
+  "id": "note.example",
+  "schemaVersion": 1,
+  "entityType": "user_note",
+  "knowledgeScope": "vehicle_specific",
+  "status": "draft",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "relatedEntityIds": [
+    "inspection.brakes.general"
+  ],
+  "text": "Example note.",
+  "createdAt": "2026-08-17T00:00:00Z",
+  "updatedAt": "2026-08-17T00:00:00Z",
+  "pinned": false
+}

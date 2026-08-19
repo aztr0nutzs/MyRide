@@ -1,0 +1,21 @@
+{
+  "id": "diagnostic.result.low-pedal.leak",
+  "schemaVersion": 1,
+  "entityType": "diagnostic_result",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "symptomId": "diagnostic.symptom.low-brake-pedal",
+  "resultType": "stop",
+  "title": "Hydraulic leak is a possible cause",
+  "description": "Do not treat bleeding as a substitute for repairing a hydraulic leak.",
+  "confidence": "moderate",
+  "relatedSystemIds": [
+    "system.brakes"
+  ],
+  "relatedComponentIds": [],
+  "nextNodeIds": [],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "referenceIds": []
+}

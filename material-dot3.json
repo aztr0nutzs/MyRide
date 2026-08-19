@@ -1,0 +1,15 @@
+{
+  "id": "material.brake-fluid-dot3",
+  "schemaVersion": 1,
+  "entityType": "part_material",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "name": "DOT 3 brake fluid",
+  "type": "fluid",
+  "description": "Brake fluid identified in the existing guide; exact applicability requires source metadata.",
+  "requiredByProcedureIds": [
+    "procedure.brakes.manual-bleeding"
+  ],
+  "specifications": [],
+  "referenceIds": []
+}

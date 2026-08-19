@@ -1,0 +1,24 @@
+{
+  "id": "diagnostic.symptom.low-brake-pedal",
+  "schemaVersion": 1,
+  "entityType": "diagnostic_symptom",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "name": "Low or sinking brake pedal",
+  "description": "Brake pedal travels unusually far or sinks under sustained pressure.",
+  "aliases": [
+    "low pedal",
+    "sinking pedal",
+    "soft pedal"
+  ],
+  "systemIds": [
+    "system.brakes"
+  ],
+  "rootQuestionIds": [
+    "diagnostic.question.low-pedal.leak"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "referenceIds": []
+}

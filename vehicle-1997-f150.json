@@ -1,0 +1,20 @@
+{
+  "id": "vehicle.ford.f150.1997.example",
+  "schemaVersion": 1,
+  "entityType": "vehicle",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "identity": {
+    "year": 1997,
+    "make": "Ford",
+    "model": "F-150",
+    "trim": null
+  },
+  "configurationId": "configuration.ford.f150.1997.example",
+  "nickname": null,
+  "vin": null,
+  "licensePlate": null,
+  "odometer": null,
+  "odometerUnit": null,
+  "noteIds": []
+}

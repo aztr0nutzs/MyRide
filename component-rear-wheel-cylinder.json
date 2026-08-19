@@ -1,0 +1,37 @@
+{
+  "id": "component.brakes.rear-wheel-cylinder",
+  "schemaVersion": 1,
+  "entityType": "component",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "name": "Rear Wheel Cylinder",
+  "systemId": "system.brakes",
+  "aliases": [],
+  "description": "Hydraulic component used in a rear drum brake assembly.",
+  "purpose": "Actuates the rear brake shoes when hydraulic pressure is applied.",
+  "location": [
+    "Inside the applicable rear drum brake assembly"
+  ],
+  "normalConditions": [
+    "No external hydraulic leakage."
+  ],
+  "failureIndicators": [
+    "Visible leakage.",
+    "Fluid contamination inside the drum area."
+  ],
+  "inspectionIds": [
+    "inspection.brakes.rear"
+  ],
+  "procedureIds": [],
+  "diagnosticIds": [
+    "diagnostic.symptom.low-brake-pedal"
+  ],
+  "mediaIds": [
+    "media.diagram.rear-drum-inspection"
+  ],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ],
+  "referenceIds": [],
+  "specifications": []
+}

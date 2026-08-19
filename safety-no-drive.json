@@ -1,0 +1,33 @@
+{
+  "id": "safety.brakes.do-not-drive-with-unsafe-pedal",
+  "schemaVersion": 1,
+  "entityType": "safety_rule",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Do not drive with an unsafe brake pedal",
+  "severity": "stop",
+  "category": "braking",
+  "trigger": {
+    "type": "finding",
+    "conditions": [
+      "pedal nearly reaches floor",
+      "pedal sinks abnormally",
+      "hydraulic leak suspected"
+    ]
+  },
+  "message": "Do not road-test until the braking system has been inspected and the unsafe condition resolved.",
+  "immediateActions": [
+    "Secure the vehicle.",
+    "Inspect the hydraulic system and brake hardware."
+  ],
+  "prohibitedActions": [
+    "Do not road-test an unsafe brake system.",
+    "Do not use bleeding as a substitute for repairing a leak."
+  ],
+  "resumeConditions": [
+    "Stationary brake test passes.",
+    "No active hydraulic leak.",
+    "Applicable mechanical faults are resolved."
+  ],
+  "referenceIds": []
+}

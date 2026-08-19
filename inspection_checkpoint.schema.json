@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://f150-garage-assistant.local/schema/inspection_checkpoint.schema.json",
+  "title": "Inspection Checkpoint",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "entityType",
+    "knowledgeScope",
+    "inspectionId",
+    "order",
+    "title",
+    "instruction",
+    "type",
+    "possibleResults"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entityType": {
+      "const": "inspection_checkpoint"
+    },
+    "knowledgeScope": {
+      "enum": [
+        "generic",
+        "vehicle_specific",
+        "configuration_specific"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "inspectionId": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "instruction": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "observation",
+        "measurement",
+        "functional_test",
+        "visual",
+        "condition"
+      ]
+    },
+    "possibleResults": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "pass",
+          "warning",
+          "fail",
+          "unknown",
+          "not_applicable"
+        ]
+      }
+    },
+    "expectedSpecification": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "value",
+            "unit",
+            "source"
+          ],
+          "properties": {
+            "value": {},
+            "unit": {
+              "type": "string"
+            },
+            "condition": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "type": "object",
+              "required": [
+                "referenceIds",
+                "verificationStatus"
+              ],
+              "properties": {
+                "referenceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "verificationStatus": {
+                  "enum": [
+                    "verified",
+                    "partially_verified",
+                    "unverified",
+                    "unknown"
+                  ]
+                },
+                "verifiedAt": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "verificationNotes": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "requiresNoteOn": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requiresPhotoOn": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safetyRuleIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

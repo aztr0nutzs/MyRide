@@ -1,0 +1,26 @@
+{
+  "id": "reference.existing-guide",
+  "schemaVersion": 1,
+  "entityType": "reference",
+  "knowledgeScope": "vehicle_specific",
+  "status": "verified",
+  "type": "user_supplied",
+  "publisher": null,
+  "title": "Existing F-150 Garage Assistant brake/shimmy guide",
+  "publicationDate": null,
+  "url": null,
+  "documentLocator": "1997_F150_5.4_4x4_Brake_Bleeding_Guide.html",
+  "applicability": {
+    "vehicleIds": [
+      "vehicle.ford.f150.1997.example"
+    ],
+    "configurationIds": [
+      "configuration.ford.f150.1997.example"
+    ],
+    "conditions": [],
+    "exclusions": []
+  },
+  "verifiedAt": null,
+  "verificationMethod": "Migration from supplied project artifact",
+  "notes": "Preserves statements from the source artifact; it is not treated as independent factory verification."
+}

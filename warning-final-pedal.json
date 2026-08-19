@@ -1,0 +1,13 @@
+{
+  "id": "warning.brakes.unsafe-final-pedal",
+  "schemaVersion": 1,
+  "entityType": "warning",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "title": "Unsafe final pedal",
+  "severity": "stop",
+  "message": "Do not road-test if the final stationary pedal evaluation remains unsafe.",
+  "context": "Post-bleeding verification",
+  "safetyCritical": true,
+  "referenceIds": []
+}

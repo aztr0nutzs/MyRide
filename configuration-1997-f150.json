@@ -1,0 +1,25 @@
+{
+  "id": "configuration.ford.f150.1997.example",
+  "schemaVersion": 1,
+  "entityType": "vehicle_configuration",
+  "knowledgeScope": "configuration_specific",
+  "status": "verified",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "engine": "5.4L",
+  "transmission": null,
+  "drivetrain": "4x4",
+  "cab": null,
+  "bed": null,
+  "rearAxle": null,
+  "abs": "Unknown; verify vehicle equipment",
+  "wheels": {},
+  "tires": {},
+  "modifications": [],
+  "specifications": [],
+  "source": {
+    "referenceIds": [],
+    "verificationStatus": "partially_verified",
+    "verifiedAt": null,
+    "verificationNotes": "Only values established by the supplied project context are populated."
+  }
+}

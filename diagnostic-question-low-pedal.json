@@ -1,0 +1,31 @@
+{
+  "id": "diagnostic.question.low-pedal.leak",
+  "schemaVersion": 1,
+  "entityType": "diagnostic_question",
+  "knowledgeScope": "generic",
+  "status": "verified",
+  "symptomId": "diagnostic.symptom.low-brake-pedal",
+  "question": "Is there evidence of a brake-fluid leak?",
+  "answerType": "choice",
+  "answers": [
+    {
+      "id": "yes",
+      "label": "Yes",
+      "nextNodeId": "diagnostic.result.low-pedal.leak"
+    },
+    {
+      "id": "no",
+      "label": "No visible leak found",
+      "nextNodeId": "diagnostic.result.low-pedal.no-leak"
+    },
+    {
+      "id": "unknown",
+      "label": "Unknown",
+      "nextNodeId": "diagnostic.result.low-pedal.unknown"
+    }
+  ],
+  "testIds": [],
+  "safetyRuleIds": [
+    "safety.brakes.do-not-drive-with-unsafe-pedal"
+  ]
+}

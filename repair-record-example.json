@@ -1,0 +1,19 @@
+{
+  "id": "repair.example",
+  "schemaVersion": 1,
+  "entityType": "repair_record",
+  "knowledgeScope": "vehicle_specific",
+  "status": "draft",
+  "vehicleId": "vehicle.ford.f150.1997.example",
+  "date": null,
+  "mileage": null,
+  "systemId": null,
+  "componentIds": [],
+  "description": "Template only.",
+  "procedureId": null,
+  "parts": [],
+  "findingIds": [],
+  "noteIds": [],
+  "photoIds": [],
+  "cost": null
+}
