@@ -1,8 +1,8 @@
-# Project Requirements
+# MyRide Project Requirements
 
 ## 1. Product definition
 
-F-150 Garage Assistant is an offline-first, mobile-first automotive garage application focused on helping a user understand, maintain, inspect, diagnose, document, and recover information about an F-150.
+MyRide is an offline-first, mobile-first automotive garage application focused on helping a user understand, maintain, inspect, diagnose, document, and recover information about an F-150.
 
 The system must support uncertainty instead of forcing users into false precision.
 
@@ -95,7 +95,7 @@ User data remains local unless an explicit future feature says otherwise.
 Backup and restore are release-level concerns.
 
 ### NFR-007 Compatibility
-Toolchain versions must be derived from the actual repository baseline rather than guessed.
+Toolchain versions must be verified against the actual repository/toolchain rather than treated as verified merely because versions were selected in configuration.
 
 ### NFR-008 Usability
 The UI must remain practical in garage conditions.
