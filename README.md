@@ -1,14 +1,14 @@
-# F-150 Garage Assistant
-## Complete Project Documentation and AI Development Governance Package
+# MyRide
+## Automotive Garage Assistant Project and AI Development Governance
 
-Version: 1.0.0
-Prepared: 2026-08-18
+Version: 1.0.1
+Prepared: 2026-08-19
 
 ### Purpose
 
-This package is the durable engineering context for F-150 Garage Assistant. It is designed so that development can continue in VS Code, Android Studio, Antigravity, or another capable coding environment without depending on conversational memory.
+This package is the durable engineering context for MyRide. It is designed so that development can continue in VS Code, Android Studio, Antigravity, or another capable coding environment without depending on conversational memory.
 
-The product is a mobile-first garage companion for vehicle configuration, maintenance, inspections, procedures, diagnostics, records, history, search, and recovery.
+MyRide is a mobile-first garage companion for vehicle configuration, maintenance, inspections, procedures, diagnostics, records, history, search, and recovery.
 
 ### Critical rule
 
