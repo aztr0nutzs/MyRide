@@ -11,5 +11,7 @@ object MyRideDatabaseFactory {
             context.applicationContext,
             MyRideDatabase::class.java,
             DATABASE_NAME
-        ).build()
+        )
+            .addMigrations(*DatabaseMigrations.ALL)
+            .build()
 }
