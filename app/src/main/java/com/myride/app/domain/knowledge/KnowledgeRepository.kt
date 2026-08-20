@@ -1,7 +1,7 @@
 package com.myride.app.domain.knowledge
 
 interface KnowledgeRepository {
-    fun get(entryId: String): KnowledgeEntry?
-    fun save(entry: KnowledgeEntry)
-    fun delete(entryId: String)
+    suspend fun get(entryId: String): KnowledgeEntry?
+    suspend fun save(entry: KnowledgeEntry)
+    suspend fun delete(entryId: String)
 }
