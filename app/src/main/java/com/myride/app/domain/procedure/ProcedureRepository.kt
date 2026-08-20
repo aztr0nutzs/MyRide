@@ -1,7 +1,7 @@
 package com.myride.app.domain.procedure
 
 interface ProcedureRepository {
-    fun get(procedureId: String): Procedure?
-    fun save(procedure: Procedure)
-    fun delete(procedureId: String)
+    suspend fun get(procedureId: String): Procedure?
+    suspend fun save(procedure: Procedure)
+    suspend fun delete(procedureId: String)
 }
