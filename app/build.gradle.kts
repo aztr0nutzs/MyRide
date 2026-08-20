@@ -19,9 +19,7 @@ android {
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = false
-        }
+        release { isMinifyEnabled = false }
     }
 
     compileOptions {
@@ -29,14 +27,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+    kotlinOptions { jvmTarget = "17" }
 }
 
-room {
-    schemaDirectory("$projectDir/schemas")
-}
+room { schemaDirectory("$projectDir/schemas") }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.17.0")
@@ -46,4 +40,7 @@ dependencies {
     ksp("androidx.room:room-compiler:2.8.4")
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.room:room-testing:2.8.4")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test:runner:1.7.0")
+    androidTestImplementation("androidx.room:room-testing:2.8.4")
 }
