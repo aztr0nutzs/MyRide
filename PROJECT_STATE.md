@@ -1,6 +1,6 @@
 # Project State
 
-Baseline: 2026-08-19
+Baseline: 2026-08-20
 
 ## State labels
 
@@ -8,7 +8,7 @@ PLANNED, IN_PROGRESS, IMPLEMENTED, VERIFIED, BLOCKED, DEFERRED, RETIRED.
 
 ## Current baseline
 
-The project governance/documentation baseline is established. Phase 2 Android foundation and initial domain models are now being established on the dedicated `phase-2/android-foundation` branch.
+The governance baseline, Android foundation, initial domain models, repository contracts, and first persistence implementation are established on `phase-2/android-foundation`. The persistence change is implemented as an open draft PR against `main` pending CI validation.
 
 The repository is the authoritative source for implementation state. Tests and build status must be based on executed checks, never documentation claims.
 
@@ -32,32 +32,34 @@ The project is intended to support a 1997 Ford F-150 context, but the exact conf
 
 ## Current implementation state
 
-### Verified
+### Implemented
 
 - Correct GitHub repository: `aztr0nutzs/MyRide`.
-- Phase 2 development branch created: `phase-2/android-foundation`.
-- Initial Android Gradle project structure added.
-- Minimal launch activity added.
-- Initial vehicle/configuration domain model added.
-- Initial maintenance domain model added.
-- Initial inspection domain model added.
-- Initial diagnostic domain model added.
-- Initial procedure domain model added.
-- Initial governed knowledge/provenance model added.
-- Initial safety rule/gate model added.
-- Project documentation renamed from F-150 Garage Assistant to MyRide.
+- Phase 2 development branch: `phase-2/android-foundation`.
+- Initial Android Gradle project structure and minimal launch activity.
+- Vehicle, maintenance, inspection, diagnostic, procedure, knowledge/provenance, and safety domain models.
+- Repository contracts.
+- Room persistence foundation.
+- Target schema v2 covering vehicle, maintenance, inspection, diagnostics, procedures, knowledge, attachments, and settings.
+- Explicit non-destructive v1-to-v2 migration.
+- Migration registration in database construction.
+- Versioned database export and transaction-safe restore with validation before mutation.
+- Persistence instrumentation tests for empty databases, populated data, stable IDs/relationships, invalid imports, and duplicate-primary-key edge cases.
+- Migration registry contract test.
+- Target schema documentation.
 
-### Blocked / not yet verified
+### Not yet verified
 
-- Gradle wrapper executable validation. The wrapper configuration exists, but the binary wrapper JAR has not yet been added through the available text-file GitHub API.
-- Actual Gradle build execution from the GitHub connector environment.
-- Android SDK/JDK availability in a local execution environment.
-- Unit-test execution.
+- Actual Gradle build execution.
+- Android SDK/JDK availability in the connected execution environment.
+- Instrumented Android test execution.
+- Generated Room schema artifact inspection.
 - Runtime launch verification.
 - APK generation.
-- Persistence implementation.
-- Knowledge data population.
+- Governed automotive knowledge population.
 - Core UI implementation.
+- Maintenance/inspection/diagnostic application workflows.
+- Final backup/restore release validation.
 
 ## Current risks
 
@@ -67,17 +69,16 @@ The project is intended to support a 1997 Ford F-150 context, but the exact conf
 4. UI changes accidentally changing behavior.
 5. Documentation drifting from implementation.
 6. Build success being mistaken for automotive correctness.
-7. Toolchain versions being treated as verified without local execution.
+7. Toolchain versions being treated as verified without execution.
 
 ## Required next implementation sequence
 
-1. Finish Android/toolchain baseline and verify it in an executable environment.
-2. Complete domain models and domain tests.
-3. Establish persistence.
-4. Establish governed knowledge data.
+1. Verify the persistence change through CI and fix only reproducible failures.
+2. Synchronize documentation after verified implementation state.
+3. Complete governed knowledge data.
+4. Establish application/use-case layer as required by architecture.
 5. Establish core UI.
 6. Implement maintenance/inspection workflows.
 7. Implement diagnostic workflows.
-8. Implement search/history/export/import.
-9. Harden recovery/accessibility/offline behavior.
-10. Release validation.
+8. Harden search/history/export/import and recovery/accessibility/offline behavior.
+9. Release validation.
