@@ -1,7 +1,6 @@
 package com.myride.app.persistence
 
 import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 
 /**
  * Central registry for explicit database migrations.
@@ -12,7 +11,4 @@ import androidx.sqlite.db.SupportSQLiteDatabase
  */
 object DatabaseMigrations {
     val ALL: Array<Migration> = emptyArray()
-
-    @Suppress("UNUSED_PARAMETER")
-    private fun placeholder(database: SupportSQLiteDatabase) = Unit
 }
