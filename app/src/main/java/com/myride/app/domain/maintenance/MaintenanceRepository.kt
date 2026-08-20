@@ -1,7 +1,7 @@
 package com.myride.app.domain.maintenance
 
 interface MaintenanceRepository {
-    fun get(eventId: String): MaintenanceEvent?
-    fun save(event: MaintenanceEvent)
-    fun delete(eventId: String)
+    suspend fun get(eventId: String): MaintenanceEvent?
+    suspend fun save(event: MaintenanceEvent)
+    suspend fun delete(eventId: String)
 }
