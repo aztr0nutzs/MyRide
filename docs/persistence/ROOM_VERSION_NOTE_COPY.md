@@ -1,1 +1,0 @@
-Room 2.8.4 is the current bounded persistence dependency choice. The project will not switch dependency families mid-phase without a documented architecture decision and successful validation.
